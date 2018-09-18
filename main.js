@@ -28,6 +28,7 @@ for (var i = 0; i < articleEl.length; i++) {
     Define functions that hold logic to be performed when mouse
     events are triggered by the browser.
 */
+
 function handleHeaderMouseOver (event) {
     outputEl.innerHTML = "You moved your mouse over me"
 }
