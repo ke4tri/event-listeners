@@ -121,18 +121,32 @@ function toggleClass (newClass) {
 
 /////////////////////////////////////////////////////
 var section_flight = document.getElementById("flight");
+var section_mind = document.getElementById("mindreading");
+var section_x_ray = document.getElementById("xray");
+
 var article1 = document.querySelector("power disabled");
 
 
-const handlerFunction = () => {
-//    var new_dom = article1.flight.classList[1] 
-//    new_dom.innerHTML = "enabled"
-      section_flight.setAttribute("class","power enable");
-   
+var powers_on = () => {
+        section_flight.setAttribute("class","power enable"); 
+        section_mind.setAttribute("class","power enable");
+        section_x_ray.setAttribute("class","power enable");
 };
 
-document.querySelector("#activate-flight").addEventListener("click", function(){
-    handlerFunction()});
+var powers_off = () => {
+        section_flight.setAttribute("class","power disable"); 
+        section_mind.setAttribute("class","power disable"); 
+        section_x_ray.setAttribute("class","power disable"); 
+};
 
-// document.querySelector("#activate-mindreading").addEventListener()
-// document.querySelector("#active-xray").addEventListener()
+
+// document.querySelector("#activate-flight").addEventListener("click", function(){
+//     handlerFunction()});
+
+
+
+document.querySelector("#activate-all").addEventListener("click", function(){
+powers_on()});
+
+document.querySelector("#deactivate-all").addEventListener("click", function(){
+    powers_off()});
