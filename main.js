@@ -120,33 +120,46 @@ function toggleClass (newClass) {
 // })
 
 /////////////////////////////////////////////////////
-var section_flight = document.getElementById("flight");
-var section_mind = document.getElementById("mindreading");
-var section_x_ray = document.getElementById("xray");
-
-var article1 = document.querySelector("power disabled");
 
 
-var powers_on = () => {
-        section_flight.setAttribute("class","power enable"); 
-        section_mind.setAttribute("class","power enable");
-        section_x_ray.setAttribute("class","power enable");
+// let activate_on = () => {
+//     let article1 = document.getElementById("powerList")
+// };
+let activate_on = () => {
+    let ids = document.querySelectorAll('section'), i;
+    for (i = 0; i < ids.length; ++i) {
+    ids[i].setAttribute("class","power enabled")
+    }
 };
 
-var powers_off = () => {
-        section_flight.setAttribute("class","power disable"); 
-        section_mind.setAttribute("class","power disable"); 
-        section_x_ray.setAttribute("class","power disable"); 
+let activate_off = () => {
+    var ids = document.querySelectorAll('section'), i;
+    for (i = 0; i < ids.length; ++i) {
+    ids[i].setAttribute("class","power disabled")
+    }
 };
-
-
-// document.querySelector("#activate-flight").addEventListener("click", function(){
-//     handlerFunction()});
-
-
 
 document.querySelector("#activate-all").addEventListener("click", function(){
-powers_on()});
-
+    activate_on()});
+// document.querySelector("#activate-all").addEventListener("click", function(){
+// powers_on()});
 document.querySelector("#deactivate-all").addEventListener("click", function(){
-    powers_off()});
+    activate_off()});
+
+    // THIS WORKS BELOW BUT IT DOESN'T DO THE ITERATION OVER THE DOM ELEMENTS
+
+    // let section_flight = document.getElementById("flight");
+    // let section_mind = document.getElementById("mindreading");
+    // let section_x_ray = document.getElementById("xray");
+    
+// let powers_on = () => {
+//         section_flight.setAttribute("class","power enable"); 
+//         section_mind.setAttribute("class","power enable");
+//         section_x_ray.setAttribute("class","power enable");
+// };
+
+// let powers_off = () => {
+//         section_flight.setAttribute("class","power disable"); 
+//         section_mind.setAttribute("class","power disable"); 
+//         section_x_ray.setAttribute("class","power disable"); 
+// };
