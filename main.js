@@ -1,3 +1,9 @@
+const printToDom = (stringToPrint, divId) => {
+    const selectedDiv = document.getElementById(divId);
+    selectedDiv.innerHTML += stringToPrint;
+};
+
+
 var outputEl = document.getElementById("output-target")
 
 
@@ -45,8 +51,8 @@ const header = document.getElementById("page-header");
     "page-header", and attach an event handler for the
     mouseover, and mouseout, events.
  */
-header.addEventListener("mouseover", handleHeaderMouseOver)
-header.addEventListener("mouseout", handleHeaderMouseOut)
+// header.addEventListener("mouseover", handleHeaderMouseOver)
+// header.addEventListener("mouseout", handleHeaderMouseOut)
 
 
 
@@ -57,9 +63,9 @@ header.addEventListener("mouseout", handleHeaderMouseOut)
  */
 var fieldEl = document.getElementById("keypress-input")
 
-fieldEl.addEventListener("keyup", function (event) {
-    outputEl.innerHTML = event.target.value
-})
+// fieldEl.addEventListener("keyup", function (event) {
+//     outputEl.innerHTML = event.target.value
+// })
 
 
 /*
@@ -79,21 +85,26 @@ function toggleClass (newClass) {
   console.log("guineaPig.classList", guineaPig.classList)
 }
 
-document.getElementById("add-color").addEventListener("click", function() {
-    toggleClass("blue")
-})
+// document.getElementById("add-color").addEventListener("click", function() {
+//     printList();
+// })
 
-document.getElementById("make-large").addEventListener("click", function() {
-    toggleClass("large")
-})
+// document.getElementById("add-color").addEventListener("click", function() {
+//     toggleClass("blue")
+// })
 
-document.getElementById("add-border").addEventListener("click", function() {
-    toggleClass("bordered")
-})
 
-document.getElementById("add-rounding").addEventListener("click", function() {
-    toggleClass("rounded")
-})
+// document.getElementById("make-large").addEventListener("click", function() {
+//     toggleClass("large")
+// })
+
+// document.getElementById("add-border").addEventListener("click", function() {
+//     toggleClass("bordered")
+// })
+
+// document.getElementById("add-rounding").addEventListener("click", function() {
+//     toggleClass("rounded")
+// })
 
 
 /*
@@ -104,9 +115,24 @@ document.getElementById("add-rounding").addEventListener("click", function() {
   conditional logic to handle the click event on many different
   elements in one function.
  */
-document.querySelector("body").addEventListener("click", function(event) {
-    console.log("You clicked on the body of the DOM")
-})
+// document.querySelector("body").addEventListener("click", function(event) {
+//     console.log("You clicked on the body of the DOM")
+// })
+
+/////////////////////////////////////////////////////
+var section_flight = document.getElementById("flight");
+var article1 = document.querySelector("power disabled");
 
 
+const handlerFunction = () => {
+//    var new_dom = article1.flight.classList[1] 
+//    new_dom.innerHTML = "enabled"
+      section_flight.setAttribute("class","power enable");
+   
+};
 
+document.querySelector("#activate-flight").addEventListener("click", function(){
+    handlerFunction()});
+
+// document.querySelector("#activate-mindreading").addEventListener()
+// document.querySelector("#active-xray").addEventListener()
