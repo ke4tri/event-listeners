@@ -1,0 +1,15 @@
+.blue {
+    background-color: blue;
+}
+
+.large {
+    font-size: 40px;
+};
+
+.bordered{
+    border: 56px solid purple;
+}
+
+.rounded{
+    border-radius: 100px;
+}

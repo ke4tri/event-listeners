@@ -85,26 +85,26 @@ function toggleClass (newClass) {
   console.log("guineaPig.classList", guineaPig.classList)
 }
 
-// document.getElementById("add-color").addEventListener("click", function() {
-//     printList();
-// })
+document.getElementById("add-color").addEventListener("click", function() {
+    printList();
+})
 
-// document.getElementById("add-color").addEventListener("click", function() {
-//     toggleClass("blue")
-// })
+document.getElementById("add-color").addEventListener("click", function() {
+    toggleClass("blue")
+})
 
 
-// document.getElementById("make-large").addEventListener("click", function() {
-//     toggleClass("large")
-// })
+document.getElementById("make-large").addEventListener("click", function() {
+    toggleClass("large")
+})
 
-// document.getElementById("add-border").addEventListener("click", function() {
-//     toggleClass("bordered")
-// })
+document.getElementById("add-border").addEventListener("click", function() {
+    toggleClass("bordered")
+})
 
-// document.getElementById("add-rounding").addEventListener("click", function() {
-//     toggleClass("rounded")
-// })
+document.getElementById("add-rounding").addEventListener("click", function() {
+    toggleClass("rounded")
+})
 
 
 /*
@@ -125,26 +125,27 @@ function toggleClass (newClass) {
 // let activate_on = () => {
 //     let article1 = document.getElementById("powerList")
 // };
-let activate_on = () => {
-    let ids = document.querySelectorAll('section'), i;
-    for (i = 0; i < ids.length; ++i) {
-    ids[i].setAttribute("class","power enabled")
-    }
-};
 
-let activate_off = () => {
-    var ids = document.querySelectorAll('section'), i;
-    for (i = 0; i < ids.length; ++i) {
-    ids[i].setAttribute("class","power disabled")
-    }
-};
-
-document.querySelector("#activate-all").addEventListener("click", function(){
-    activate_on()});
+///////////////////////////////////////////////////////////
+// let activate_on = () => {
+//     let ids = document.querySelectorAll('section'), i;
+//     for (i = 0; i < ids.length; ++i) {
+//     ids[i].setAttribute("class","power enabled")
+//     }
+// };
+// let activate_off = () => {
+//     var ids = document.querySelectorAll('section'), i;
+//     for (i = 0; i < ids.length; ++i) {
+//     ids[i].setAttribute("class","power disabled")
+//     }
+// };
 // document.querySelector("#activate-all").addEventListener("click", function(){
+//     activate_on()});
+// document.querySelector("#deactivate-all").addEventListener("click", function(){
+//     activate_off()});
+
+    // document.querySelector("#activate-all").addEventListener("click", function(){
 // powers_on()});
-document.querySelector("#deactivate-all").addEventListener("click", function(){
-    activate_off()});
 
     // THIS WORKS BELOW BUT IT DOESN'T DO THE ITERATION OVER THE DOM ELEMENTS
 
