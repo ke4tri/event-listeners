@@ -9,7 +9,7 @@ const submitToDoButtonElem = document.getElementById('submitToDoButton');
 
 const activateDeletes = () => {
     const deleteButtons = document.getElementsByClassName('deleteButton');
-
+    console.log(deleteButtons);
     for (let i = 0; i < deleteButtons.length; i++) {
         const element = deleteButtons[i];
         element.addEventListener("click", (e) => {
@@ -19,14 +19,12 @@ const activateDeletes = () => {
             cardToDelete.remove();
             // .parentNode
             //.remove() takes it off the dom
-            
         })
     }
-    
 };
 
 const buildNewToDoCard = (toDo, notes) => {
-    let domString = `<div class="card" style="width: 18rem;">
+    let domString = `<div class="card w-25 m-2">
     <div class="card-body">
       <h5 class="card-title">${toDo}</h5>
       <p class="card-text">${notes}</p>
@@ -39,8 +37,6 @@ const buildNewToDoCard = (toDo, notes) => {
 
 
 submitToDoButtonElem.addEventListener('click', (e) => {
-    e.preventDefault();
-
+    e.preventDefault();// form has a submit type and a button inside of a form is why we had to youse it. 
     buildNewToDoCard(toDoInputElem.value, notesInputElem.value);
-   
 });
