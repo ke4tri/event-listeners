@@ -1,3 +1,9 @@
 body {
     background-color: blueviolet;
 }
+
+#form_div{
+    width: 400px;
+    border: 3px solid black;
+    border-radius: 20px;
+}
